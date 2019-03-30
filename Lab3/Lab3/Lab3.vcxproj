@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Calculation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ShuntingYard.cpp" />
   </ItemGroup>
