@@ -27,7 +27,7 @@ double CalculateResult(string& output)
 			}
 			i++;
 		}
-		else if (output[i] == '-' && i == 0 && !isNumber(output[i + 1]))
+		else if (output[i] == '-' && i == 0 && !isNumber(output[i + 1])) 
 		{
 			flag = true;
 			i++;
@@ -52,7 +52,7 @@ double CalculateResult(string& output)
 				cout << " Error "; break;
 
 			}
-			if (flag)
+			if (flag) 
 			{
 				calc *= (-1);
 				resultStack.push(calc);
@@ -64,7 +64,7 @@ double CalculateResult(string& output)
 			i++;
 		}
 	}
-	if (resultStack.size() > 1) 
+	if (resultStack.size() > 1)
 	{
 		cout << " Incorrect formula ";
 		return 0;
