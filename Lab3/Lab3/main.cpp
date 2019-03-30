@@ -1,14 +1,16 @@
-#include <iostream>
-#include <string>
-
-using namespace std;
+#include "Lab3.h"
 
 int main(int argc, char* argv[])
 {
 	string mathFormula;
-	for (int i = 1; i < argc; i++)
+	/*for (int i = 1; i < argc; i++)
 		mathFormula += argv[i];
+		*/
+	getline(cin, mathFormula);
+	string reversePolishNotation = "";
+	reversePolishNotation = postfixLine(mathFormula);
 
+	cout << reversePolishNotation;
 
 	
 	cin.get();

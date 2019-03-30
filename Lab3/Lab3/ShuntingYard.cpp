@@ -1,7 +1,4 @@
-#include "Stack.h"
-#include <string>
-#include <iostream>
-using namespace std;
+#include "Lab3.h"
 
 bool isNumber(char symbol) {
 	if ((symbol >= '0' && symbol <= '9'))
@@ -17,7 +14,7 @@ bool isOperator(char symbol) {
 	}
 	return false;
 }
-int operate_priority(const char symbol) {
+int operate_priority(char symbol) {
 	switch (symbol)
 	{
 	case '^':
