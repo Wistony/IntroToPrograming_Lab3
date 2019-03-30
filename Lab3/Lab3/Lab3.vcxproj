@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ShuntingYard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stack.h" />
