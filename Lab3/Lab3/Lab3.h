@@ -8,4 +8,5 @@ bool isNumber(char);
 bool isOperator(char);
 int operate_priority(char);
 string postfixLine(string&);
-double CalculateResult(string& output);
+double CalculateResult(string&);
+void fixMinus(string&);

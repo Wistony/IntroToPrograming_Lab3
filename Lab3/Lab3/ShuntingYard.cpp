@@ -1,5 +1,18 @@
 #include "Lab3.h"
 
+void fixMinus(string& mathFormula) {
+	string output = "1*";
+	int i = 0;
+	while (!isNumber(mathFormula[i])) {
+		if (mathFormula[i] == '-' && mathFormula[i + 1] == '(') {
+			mathFormula.insert(i + 1, output);
+			i += 2;
+		}
+		else
+			i++;
+	}
+}
+
 bool isNumber(char symbol) {
 	if ((symbol >= '0' && symbol <= '9'))
 		return true;
