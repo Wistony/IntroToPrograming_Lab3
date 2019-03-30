@@ -5,12 +5,12 @@ double CalculateResult(string& output)
 	Stack <double> resultStack(output.length());
 	string number = "";
 	double first, second;
-	int calc = 0;
+	double calc = 0;
 	int i = 0;
 	bool flag = false;
 	int j = 1;
 
-	while (i < output.length())
+	while (i < output.length()) 
 	{
 		if (output[i] == ' ')
 			i++;
@@ -20,14 +20,14 @@ double CalculateResult(string& output)
 		{
 			number = number + output[i];
 
-			if (!isNumber(output[i + 1]) && (output[i + 1] != '.'))
+			if (!isNumber(output[i + 1]) && (output[i + 1] != '.')) 
 			{
 				resultStack.push(stod(number));
 				number = "";
 			}
 			i++;
 		}
-		else if (output[i] == '-' && i == 0 && !isNumber(output[i + 1])) 
+		else if (output[i] == '-' && i == 0 && !isNumber(output[i + 1]))
 		{
 			flag = true;
 			i++;
@@ -43,7 +43,7 @@ double CalculateResult(string& output)
 			case '-':
 				calc = first - second; break;
 			case '*':
-				calc = first + second; break;
+				calc = first * second; break;
 			case '/':
 				calc = first / second; break;
 			case '^':
@@ -63,6 +63,11 @@ double CalculateResult(string& output)
 
 			i++;
 		}
+	}
+	if (resultStack.size() > 1) 
+	{
+		cout << " Incorrect formula ";
+		return 0;
 	}
 	return resultStack.top();
 }
