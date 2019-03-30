@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 	reversePolishNotation = postfixLine(mathFormula);
 
 	cout << reversePolishNotation;
-	cout << " Result = " << CalculateResult(reversePolishNotation);
+	cout << " Result: " << CalculateResult(reversePolishNotation);
 	
 	cin.get();
 }

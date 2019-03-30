@@ -7,8 +7,6 @@ double CalculateResult(string& output)
 	double first, second;
 	double calc = 0;
 	int i = 0;
-	bool flag = false;
-	int j = 1;
 
 	while (i < output.length()) 
 	{
@@ -20,16 +18,11 @@ double CalculateResult(string& output)
 		{
 			number = number + output[i];
 
-			if (!isNumber(output[i + 1]) && (output[i + 1] != '.')) 
+			if (!isNumber(output[i + 1]) && (output[i + 1] != '.'))
 			{
 				resultStack.push(stod(number));
 				number = "";
 			}
-			i++;
-		}
-		else if (output[i] == '-' && i == 0 && !isNumber(output[i + 1])) 
-		{
-			flag = true;
 			i++;
 		}
 
@@ -52,14 +45,7 @@ double CalculateResult(string& output)
 				cout << " Error "; break;
 
 			}
-			if (flag) 
-			{
-				calc *= (-1);
-				resultStack.push(calc);
-				flag = false;
-			}
-			else
-				resultStack.push(calc);
+			resultStack.push(calc);
 
 			i++;
 		}
